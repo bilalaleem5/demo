@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useCallback, useEffect, useState } from "react";
-import { Languages, Play, RotateCcw } from "lucide-react";
-import logo from "@/assets/onetech-logo.png.asset.json";
+import { Languages, Play, RotateCcw, Box } from "lucide-react";
 import { EventList } from "@/components/onetech/EventList";
 import { FlowTrace } from "@/components/onetech/FlowTrace";
 import { DecisionLog } from "@/components/onetech/DecisionLog";
@@ -82,7 +81,9 @@ function Dashboard() {
       <div className="mx-auto flex max-w-[1800px] flex-col gap-3.5 p-4">
         <header className="flex flex-wrap items-center justify-between gap-4 rounded-3xl border border-border/60 bg-panel px-5 py-4">
           <div className="flex items-center gap-3.5">
-            <img src={logo.url} alt="O.N.E Tech logo" className="h-11 w-11 rounded-2xl object-cover" />
+            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand/10 text-brand">
+              <Box className="h-6 w-6" />
+            </div>
             <div>
               <h1 className="text-[15px] font-semibold tracking-tight">
                 O.N.E<span className="text-brand">.</span>Tech{" "}

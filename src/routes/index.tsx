@@ -4,6 +4,7 @@ import { Languages, Play, RotateCcw, Box } from "lucide-react";
 import { EventList } from "@/components/onetech/EventList";
 import { FlowTrace } from "@/components/onetech/FlowTrace";
 import { DecisionLog } from "@/components/onetech/DecisionLog";
+import { ExceptionFlow } from "@/components/onetech/ExceptionFlow";
 import { TaskBoard } from "@/components/onetech/TaskBoard";
 import { EVENTS, KPIS, STAGES, type DemoEvent, type Lang, type Task } from "@/lib/onetech/data";
 
@@ -156,6 +157,7 @@ function Dashboard() {
               onToggle={(i) => setExpanded(expanded === i ? null : i)}
             />
             {(stageIndex > 3 || stageIndex >= STAGES.length) && <DecisionLog lang={lang} event={event} />}
+            {(stageIndex > 4 || stageIndex >= STAGES.length) && <ExceptionFlow lang={lang} event={event} />}
             <TaskBoard lang={lang} extraTask={newTask} highlightEventId={event.id} />
           </div>
         </div>
